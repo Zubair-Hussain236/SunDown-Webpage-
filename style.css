@@ -1,0 +1,502 @@
+@font-face {
+    font-family: neu;
+    src: url(./assets/NeueHaasDisplayMediumItalic.ttf);
+}
+
+@font-face {
+    font-family: neu;
+    font-weight: 100;
+    src: url(./assets/NeueHaasDisplayLight.ttf);
+}
+
+@font-face {
+    font-family: roman;
+    font-weight: 200;
+    src: url(./assets/NeueHaasDisplayRoman.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "neue haas";
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    /* background-color:#000; */
+
+
+}
+
+#main {
+    /* background-color: #000; */
+    position: relative;
+    z-index: 10;
+}
+
+
+
+.page1 {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #EFEAE3;
+    position: relative;
+    padding: 0 2vw;
+}
+
+#nav {
+    padding: 5vw 2vw;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#nav-part2 {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+
+}
+
+#nav-part2>h4 {
+    padding: 10px 20px;
+    border: 1px solid #8a8484;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all ease 0.4s;
+    color: rgba(0, 0, 0, 0.482);
+    position: relative;
+    overflow: hidden;
+
+
+}
+
+#nav-part2>h4::after {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    left: 0;
+    bottom: -100%;
+    border-radius: 50px;
+    transition: all ease 0.4s;
+
+}
+
+#nav-part2>h4:hover::after {
+    bottom: 0;
+    border-radius: 0;
+
+}
+
+#nav-part2>h4>a {
+    text-decoration: none;
+    color: #000000bb;
+    position: relative;
+    z-index: 9;
+}
+
+#nav-part2>h4:hover a {
+    color: white;
+}
+
+#center {
+    height: 65vh;
+    width: 100%;
+    /* background-color: orangered; */
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 1px solid #000000bb;
+    padding-bottom: 2.5vw;
+}
+
+#left>h3 {
+    width: 25vw;
+    font-size: 1.8vw;
+    line-height: 2vw;
+}
+
+#right>h1 {
+    font-size: 10vw;
+    text-align: right;
+    line-height: 9vw;
+}
+
+.page1>video {
+    position: relative;
+    border-radius: 30px;
+    margin-top: 4vw;
+    width: 100%;
+
+}
+
+#hero-shape {
+    position: absolute;
+    width: 46vw;
+    height: 36vw;
+    right: 0;
+    top: 70vh;
+    /* filter: blur(20px); */
+
+}
+
+#hero-1 {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#FE320A, #Fe320a);
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    filter: blur(10px);
+    position: absolute;
+}
+
+#hero-2 {
+    width: 30vw;
+    height: 30vw;
+    background: linear-gradient(#FE320A, #Fe320a);
+    border-radius: 50%;
+    filter: blur(25px);
+    position: absolute;
+}
+
+
+#hero-3 {
+    width: 30vw;
+    height: 30vw;
+    background: linear-gradient(#FE320A, #Fe320a);
+    border-radius: 50%;
+    filter: blur(20px);
+    position: absolute;
+    animation-name: anime1;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes anime1 {
+    form {
+
+        transform: translate(0%, 10%);
+    }
+
+    to {
+        /* transform: translate(0%,10%); */
+        transform: translate(55%, -3%);
+    }
+
+}
+
+#page2 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    padding: 8vw 0;
+    position: relative;
+
+}
+
+#moving-text {
+    white-space: nowrap;
+    overflow-x: auto;
+    /* display: inline-block; */
+}
+
+#moving-text::-webkit-scrollbar {
+    display: none;
+}
+
+.con {
+    /* background-color: lightblue; */
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: move;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+
+#moving-text h1 {
+
+    font-size: 9vw;
+    /* background-color: lightblue; */
+    display: inline-block;
+}
+
+
+
+
+#gola {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: #FE320A;
+    display: inline-block;
+    margin: 1vw 2vw;
+
+}
+
+@keyframes move {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+
+}
+
+
+#page2-bottom {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding-top: 22px; */
+    padding: 4.5vw;
+    position: relative;
+    z-index: 9;
+
+}
+
+#page2-bottom img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+#page2-bottom h1 {
+    font-size: 4vw;
+    width: 60%;
+    line-height: 4vw;
+
+}
+
+#bottom-par2 {
+    width: 18%;
+}
+
+#bottom-par2 p {
+    font-weight: 200;
+    margin-top: 2vw;
+}
+
+#page2 #goeey {
+    height: 30vw;
+    width: 32vw;
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(to top right, #FE320A, #ff5c0b);
+    top: 58%;
+    left: 25%;
+    filter: blur(20px);
+    animation-name: anime2;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+
+}
+
+@keyframes anime2 {
+    form {
+        filter: blur(20px);
+        transform: translate(10%, -10%) skew(0);
+    }
+
+    to {
+        filter: blur(30px);
+        transform: translate(-10%, 10%) skew(-12deg);
+    }
+
+}
+
+/* #goeey-1{
+    height: 100%;
+    width: 100%;
+
+} */
+
+#page3 {
+    min-height: 100vh;
+    width: 100%;
+    background: #EFEAE3;
+    padding-top: 30px;
+    padding: 7vw 0;
+
+
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(224, 154, 24);
+    position: absolute;
+    left: 0;
+    top: -100%;
+    transition: all ease 0.25s;
+}
+
+.elem:hover .overlay {
+    top: 0;
+}
+
+.elem {
+    height: 130px;
+    width: 100%;
+    /* background-color: orange; */
+    position: relative;
+    /* border-top: 1px solid #000; */
+    border-bottom: 1px solid #00000072;
+    display: flex;
+    align-items: center;
+    padding: 0 2vw;
+    overflow: hidden;
+}
+
+.elem h2 {
+    font-size: 3vw;
+    position: relative;
+    z-index: 9;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px;
+
+}
+
+.title>p {
+    margin-left: 7px;
+}
+
+.title>img {
+    width: 19px;
+}
+
+.titl {
+    margin-left: 22px;
+}
+
+.titl>p {
+    font: weight 500px;
+    ;
+    font-style: inherit;
+}
+
+#fixed-image {
+    height: 30vw;
+    width: 24vw;
+    /* background-color: red; */
+    border-radius: 10px;
+    position: fixed;
+    z-index: 99;
+    left: 50%;
+    top: 25%;
+    display: none;
+    background-size: cover;
+    background-position: center;
+}
+
+#page4 {
+    height: 60vh;
+    width: 100%;
+    background-color: #EFEAE3;
+}
+
+#page5 {
+    height: 100vh;
+    width: 100%;
+    background-color: transparent;
+}
+
+#footer {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    z-index: 9;
+    bottom: 0;
+    display: flex;
+    /* align-items: flex-end; */
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+#footer h1 {
+    font-size: 23vw;
+    font-family: neu;
+}
+
+#footer-div {
+    height: 50vh;
+    width: 100%;
+    position: relative;
+    display: inline-block;
+
+    /* background-color: red; */
+
+}
+
+#div-1,
+#div-2,
+#div-3 {
+    background-color: #FE320A;
+
+}
+
+#div-1 {
+    min-width: 22vw;
+    min-height: 22vh;
+    box-shadow: linear-gradient(to top right, #FE320A, #ff5c0b);
+    position: relative;
+    filter: blur(20px);
+    position: relative;
+}
+
+#div-2 {
+    width: 27%;
+    height: 29vh;
+    border-radius: 55px;
+    /* filter: blur(20px); */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 99;
+    animation-name: anime4;
+    animation-duration: 6s;
+   animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+
+}
+
+@keyframes anime4 {
+    form {
+        /* filter: blur(20px); */
+        transform: translate(-10%, 10%) skew(0);
+    }
+
+    to {
+        /* filter: blur(30px); */
+        transform: translate(10%, -10%) skew(-12deg);
+    }
+
+
+}
+
